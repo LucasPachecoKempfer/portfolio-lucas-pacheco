@@ -36,7 +36,7 @@ O projeto utiliza o que há de mais essencial no desenvolvimento web front-end:
     ├── imglucas.jfif         
     ├── streetshirtz.png      
     └── calculadoraprojeto.png
-
+```
 ---
 
 ## 👨‍💻 Sobre Mim
