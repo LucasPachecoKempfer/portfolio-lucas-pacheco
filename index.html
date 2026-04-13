@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucas Pacheco | Portfólio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="particulas"></div>
+
+    <nav class="navegacao">
+        <ul class="menu">
+            <li>
+                <a href="#inicio" class="menu-link">Início</a>
+            </li>
+            <li>
+                <a href="#sobre" class="menu-link">Sobre</a>
+            </li>
+            <li>
+                <a href="#projetos" class="menu-link">Projetos</a>
+            </li>
+            <li>
+                <a href="#contatos" class="menu-link">Contato</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main id="inicio" class="cabecalho">
+        <img src="img/imglucas.jfif" alt="Foto do Lucas Pacheco" class="foto-perfil">
+        <h1>Lucas Pacheco Kempfer</h1>
+        <p class="cabecalho-subtitulo">Desenvolvedor Full-Stack</p>
+    </main>
+
+    <section id="sobre" class="sobre">
+        <h2 class="sobre-titulo">Sobre Mim</h2>
+        <div class="sobre-caixa">
+            <p class="sobre-paragrafo">Sou um desenvolvedor em constante evolução, atualmente focado em tecnologias como
+                HTML, CSS e JavaScript
+                no front-end, e Java com Spring no back-end. Também tenho experiência com bancos de dados como MySQL e
+                MongoDB. Gosto de transformar ideias em projetos reais, sempre buscando melhorar a qualidade do código e
+                a experiência de quem utiliza as aplicações.</p>
+        </div>
+    </section>
+
+    <section id="projetos" class="projetos">
+        <h2 class="projetos-titulo">Meus Projetos</h2>
+        <div class="projetos-caixa">
+            <div class="projetos-carta">
+                <img src="img/streetshirtz.png" alt="Imagem do Projeto Empresa StreetShirtz" class="projetos-imagem">
+                <div class="caixa-textos-projeto">
+                    <h3 class="info-projetos">Empresa de Roupas Street</h3>
+                    <p class="paragrafo-projetos">Loja virtual moderna com animações suaves e design com responsividade
+                    </p>
+                </div>
+            </div>
+            <div class="projetos-carta">
+                <img src="img/calculadoraprojeto.png" alt="Imagem do Projeto de Calculadora em Java"
+                    class="projetos-imagem">
+                <div class="caixa-textos-projeto">
+                    <h3 class="info-projetos">Calculadora Funcional em JAVA</h3>
+                    <p class="paragrafo-projetos">Uma calculadora feita para Desktop utilizando Java Swing e Lógica</p>
+                </div>
+            </div>
+            <div class="projetos-carta">
+                <img src="img/streetshirtz.png" alt="Imagem do Projeto Empresa StreetShirtz" class="projetos-imagem">
+                <div class="caixa-textos-projeto">
+                    <h3 class="info-projetos">Empresa de Roupas Street</h3>
+                    <p class="paragrafo-projetos">Loja virtual moderna com animações suaves e design com responsividade
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="contatos" class="contatos">
+        <h2 class="contatos-titulo">Entre em Contato</h2>
+        <form class="formulario-contato" id="formulario" onsubmit="enviarWhats(event)">
+            <div class="grupo-form">
+                <input placeholder="Nome" class="campo-form" id="nome">
+            </div>
+            <div class="grupo-form">
+                <textarea class="campo-form" placeholder="Digite sua Mensagem" rows="6" id="mensagem"></textarea>
+            </div>
+
+            <button type="submit" class="botao-form">Enviar WhatsApp</button>
+        </form>
+    </section>
+
+    <script>
+        function enviarWhats(event) {
+            event.preventDefault()
+
+            const nome = document.getElementById('nome').value;
+            const mensagem = document.getElementById('mensagem').value;
+
+            const telefone = '5548988599330'
+
+            const texto = `Olá! Me chamo ${nome}, ${mensagem}`
+            const msgFormatada = encodeURIComponent(texto)
+
+            const url = `https://whatsa.me/${telefone}/?t=${msgFormatada}`
+
+            window.open(url, '_blank')
+
+        }
+    </script>
+
+</body>
+
+</html>
